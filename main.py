@@ -13,11 +13,12 @@ HUGGINGFACE_API_TOKEN = os.getenv("HUGGINGFACE_API_TOKEN")
 # Function to generate image from text using Hugging Face API
 def text2image(prompt: str, model: str):
     if model == "FLUX.1":
-        API_URL = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev"
+        API_URL = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-schnell"
     elif model == "Stable-Diffusion":
         API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
-    elif model == "RealVisXL":
-        API_URL = "https://api-inference.huggingface.co/models/SG161222/RealVisXL_V4.0"
+    elif model == "XLabs-AI":
+        API_URL = "https://api-inference.huggingface.co/models/XLabs-AI/flux-RealismLora"
+
     else:
         st.error("Invalid model selected.")
         return None
@@ -57,7 +58,7 @@ st.set_page_config(page_title="Text-to-Image Generator", page_icon=":art:", layo
 st.sidebar.title("Settings")
 model_choice = st.sidebar.selectbox(
     "Select the model to generate images:",
-    ("FLUX.1", "Stable-Diffusion", "RealVisXL")
+    ("FLUX.1", "Stable-Diffusion", "XLabs-AI")
 )
 
 # Markdown instructions
