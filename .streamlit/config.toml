@@ -3,4 +3,4 @@ primaryColor = "#FFD700"  # Gold
 backgroundColor = "#FFF8DC"  # Cornsilk
 secondaryBackgroundColor = "#FF8C00"  # Dark Orange
 textColor = "#8B4513"  # Saddle Brown
-font = "sans serif"
+font = "monospace"
